@@ -10,7 +10,6 @@ class FileData
 {
 public:
     FileData();
-
 private:
     string *answers;
     string *valid_guess;
