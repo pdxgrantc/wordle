@@ -4,10 +4,10 @@
 
 #include "filedata.h"
 
-
 using namespace std;
 
-int main() {
+int main()
+{
     cout << "Hello World!" << endl;
 
     FileData *data = new FileData();
@@ -15,4 +15,3 @@ int main() {
 
     return 0;
 }
-

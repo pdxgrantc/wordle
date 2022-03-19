@@ -5,6 +5,7 @@
 
 using namespace std;
 
-FileData::FileData() {
+FileData::FileData()
+{
     cout << "file data" << endl;
 }

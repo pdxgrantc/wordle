@@ -6,13 +6,14 @@
 
 using namespace std;
 
-class FileData 
+class FileData
 {
-    public:
-        FileData();
-    private:
-        string * answers;
-        string * valid_guess;
+public:
+    FileData();
+
+private:
+    string *answers;
+    string *valid_guess;
 };
 
 #endif
