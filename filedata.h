@@ -11,8 +11,11 @@ class FileData
 public:
     FileData();
 private:
+    string *dictionary;
     string *answers;
     string *valid_guess;
+
+    void read_dictionary();
 };
 
 #endif
