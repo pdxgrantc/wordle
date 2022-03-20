@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/pdxgrantc/code/wordle'
+g++ -c main.cpp
+g++ -c filedata.cpp
+g++ main.o filedata.o -o app
+make: Leaving directory '/home/pdxgrantc/code/wordle'
+ 

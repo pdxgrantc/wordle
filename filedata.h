@@ -10,8 +10,11 @@ class FileData
 {
 public:
     FileData();
+    ~FileData();
+
 private:
-    string *dictionary;
+    int lines;
+    string **dictionary;
     string *answers;
     string *valid_guess;
 

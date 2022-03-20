@@ -26,19 +26,39 @@ FileData::FileData()
    read_dictionary();
 }
 
+FileData::~FileData()
+{
+    cout << "destructor ran" << endl;
+    for (int i = 0; i < lines; ++i)
+    {
+        delete [] dictionary[i];
+    }
+    delete [] dictionary;
+}
+
 void FileData::read_dictionary()
 {
     fstream infile;
     infile.open("./data_files/dictionary.txt", ios::in);
     if (infile.is_open())
     { // checking whether the file is open
-        string tp;
-        //while (getline(infile, tp))
-        getline(infile, tp);
+        string line;
+        // while (getline(infile, tp))
+        getline(infile, line);
+        cout << line << "\n"; 
+        lines = stoi(line);
+        dictionary = new string *[lines];
+        for (int i = 0; i < lines; ++i)
+        {
+            dictionary[i] = new string[2];
+        }
+        string test;
+        getline(infile, test);
+        cout << test << "\n"; 
         //{                       // read data from file object and put it into string.
-            cout << tp << "\n"; // print the data of the string
+        // print the data of the string
         //}
-        //infile.close(); // close the file object.
+        // infile.close(); // close the file object.
     }
 
     infile.close();

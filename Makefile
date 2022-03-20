@@ -8,4 +8,4 @@ main.o: main.cpp
 	$(cc) -c main.cpp
 
 clean:
-	-rm *.o
+	-rm *.o $(exeFile)
